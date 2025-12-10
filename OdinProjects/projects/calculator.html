@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/output.css" />
+    <title>Calculator</title>
+  </head>
+  <style>
+    .btn {
+      height: auto;
+      background: hsl(0, 0%, 20%);
+      font-size: 1.2em;
+    }
+  </style>
+  <body class="flex items-center justify-center w-full h-screen overflow-auto">
+    <section
+      class="relative flex flex-col border h-auto max-h-[90vh] min-h-[600px] border-gray-700 p-2 w-full max-w-md sm:max-w-sm md:max-w-md rounded-lg bg-[hsl(0,0%,12%)] m-6"
+    >
+      <span class="px-2 text-xs">Calculator</span>
+      <div class="flex justify-between w-full gap-2 px-2 mt-3">
+        <div class="flex gap-2">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+              d="M5 7h14M5 12h14M5 17h10"
+            />
+          </svg>
+          <span class="text-lg font-medium">Standard</span>
+        </div>
+        <button class="cursor-pointer recent">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 8v4l3 3M3.22302 14C4.13247 18.008 7.71683 21 12 21c4.9706 0 9-4.0294 9-9 0-4.97056-4.0294-9-9-9-3.72916 0-6.92858 2.26806-8.29409 5.5M7 9H3V5"
+            />
+          </svg>
+        </button>
+      </div>
+      <input
+        type="text"
+        name="input"
+        id="input"
+        value="0"
+        readonly
+        class="w-full h-full pt-10 pb-10 pr-1 text-3xl text-right"
+      />
+      <div class="relative grid flex-1 w-full h-full grid-cols-4 nums">
+        <button class="btn number">7</button>
+        <button class="btn number">8</button>
+        <button class="btn number">9</button>
+        <button class="btn delete">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        </button>
+        <button class="btn number">4</button>
+        <button class="btn number">5</button>
+        <button class="btn number">6</button>
+        <button class="btn operator">/</button>
+        <button class="btn number">1</button>
+        <button class="btn number">2</button>
+        <button class="btn number">3</button>
+        <button class="btn operator">*</button>
+        <button class="btn number">0</button>
+        <button class="btn decimal">.</button>
+        <button class="btn operator">-</button>
+        <button class="btn operator">+</button>
+        <button class="col-span-3 btn clear">Clear</button>
+        <button class="col-span-1 btn equal">=</button>
+      </div>
+    </section>
+
+    <script src="./src/calculator.js"></script>
+  </body>
+</html>
