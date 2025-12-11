@@ -4,6 +4,5 @@ styles/
 *.log
 tailwind.config.js
 ArrayMethods/
-MDN/
 index.html
 test.html
