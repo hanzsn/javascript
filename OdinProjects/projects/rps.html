@@ -1,9 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/output.css" />
     <title>Rock Paper Scissors</title>
   </head>
-  <body></body>
+  <body class="flex items-center justify-center w-full min-h-screen">
+    <section
+      class="flex flex-col h-auto max-h-[90vh] min-h-[600px] w-full max-w-5xl bg-white shadow-xl rounded m-6 items-center justify-center gap-6"
+    >
+      <div class="flex gap-6">
+        <img
+          src="../img/leftRock.png"
+          alt="rock"
+          class="w-32 h-32 cursor-pointer animate-bounce playerChoice"
+        />
+        <img
+          src="../img/rightRock.png"
+          alt="rock"
+          class="w-32 h-32 cursor-pointer animate-bounce compChoice"
+        />
+      </div>
+      <div class="flex gap-6">
+        <img
+          src="../img/rock.png"
+          alt="rock"
+          data-choice="rock"
+          class="w-32 h-32 cursor-pointer hover:scale-105 img"
+        />
+        <img
+          src="../img/paper.png"
+          alt="paper"
+          data-choice="paper"
+          class="w-32 h-32 cursor-pointer hover:scale-105 img"
+        />
+        <img
+          src="../img/scissor.png"
+          alt="scissor"
+          data-choice="scissor"
+          class="w-32 h-32 cursor-pointer hover:scale-105 img"
+        />
+      </div>
+    </section>
+
+    <script src="../src/rps.js"></script>
+  </body>
 </html>

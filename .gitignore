@@ -2,7 +2,6 @@ node_modules/
 styles/
 .DS_Store           
 *.log
-tailwind.config.js
 ArrayMethods/
 index.html
 test.html
