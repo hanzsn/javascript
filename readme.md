@@ -1,4 +1,4 @@
-# Javascript Tasks and Projects
+Javascript Tasks and Projects
 
 Learning Resources:
 MDN Web Docs
