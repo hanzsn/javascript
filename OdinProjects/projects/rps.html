@@ -8,18 +8,28 @@
   </head>
   <body class="flex items-center justify-center w-full min-h-screen">
     <section
-      class="flex flex-col h-auto max-h-[90vh] min-h-[600px] w-full max-w-5xl bg-white shadow-xl rounded m-6 items-center justify-center gap-6"
+      class="flex relative flex-col h-auto max-h-[90vh] min-h-[600px] w-full max-w-5xl bg-white m-6 items-center justify-center gap-6"
     >
+      <div class="absolute top-2 left-2">
+        <p class="text-lg font-medium">Result: <span class="result">_</span></p>
+        <p class="text-lg font-medium">
+          Player Score: <span class="pRes">_</span>
+        </p>
+        <p class="text-lg font-medium">
+          Computer Score: <span class="cRes">_</span>
+        </p>
+      </div>
+
       <div class="flex gap-6">
         <img
           src="../img/leftRock.png"
           alt="rock"
-          class="w-32 h-32 cursor-pointer animate-bounce playerChoice"
+          class="w-32 h-32 cursor-pointer animate-bounce player"
         />
         <img
           src="../img/rightRock.png"
           alt="rock"
-          class="w-32 h-32 cursor-pointer animate-bounce compChoice"
+          class="w-32 h-32 cursor-pointer animate-bounce computer"
         />
       </div>
       <div class="flex gap-6">
@@ -27,19 +37,19 @@
           src="../img/rock.png"
           alt="rock"
           data-choice="rock"
-          class="w-32 h-32 cursor-pointer hover:scale-105 img"
+          class="w-32 h-32 cursor-pointer hover:scale-105 playerChoices"
         />
         <img
           src="../img/paper.png"
           alt="paper"
           data-choice="paper"
-          class="w-32 h-32 cursor-pointer hover:scale-105 img"
+          class="w-32 h-32 cursor-pointer hover:scale-105 playerChoices"
         />
         <img
           src="../img/scissor.png"
           alt="scissor"
           data-choice="scissor"
-          class="w-32 h-32 cursor-pointer hover:scale-105 img"
+          class="w-32 h-32 cursor-pointer hover:scale-105 playerChoices"
         />
       </div>
     </section>
