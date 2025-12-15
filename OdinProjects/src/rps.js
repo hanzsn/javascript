@@ -35,25 +35,32 @@ function getComputerChoice() {
 function checkWinner() {
   if (playerScore === 5) {
     result.textContent = "Player Wins the Game! 🎉";
-    playerScore = 0;
-    computerScore = 0;
-    pRes.textContent = 0;
-    cRes.textContent = 0;
+    setTimeout(resetGame, 2000);
     return true;
   }
   if (computerScore === 5) {
     result.textContent = "Computer Wins the Game! 🤖";
-    playerScore = 0;
-    computerScore = 0;
-    pRes.textContent = 0;
-    cRes.textContent = 0;
+    setTimeout(resetGame, 2000);
     return true;
   }
   return false;
 }
 
+function resetGame() {
+  playerScore = 0;
+  computerScore = 0;
+  pRes.textContent = 0;
+  cRes.textContent = 0;
+  result.textContent = "_";
+  player.src = playerChoicesIMG.rock;
+  computer.src = computerChoices.rock;
+}
+
+let lock = false;
+
 playerChoices.forEach((btn) => {
   btn.addEventListener("click", () => {
+    if (lock) return;
     let choices = btn.dataset.choice;
     let computerChoice = getComputerChoice();
 
@@ -62,7 +69,6 @@ playerChoices.forEach((btn) => {
     result.textContent = `player: ${choices} & computer: ${computerChoice.name}`;
 
     if (choices === computerChoice.name) {
-      result.textContent = "Draw!";
       console.log("draw");
     } else if (
       (choices === "rock" && computerChoice.name === "scissor") ||
@@ -76,6 +82,9 @@ playerChoices.forEach((btn) => {
       console.log("computer +1");
     }
 
-    checkWinner();
+    if (checkWinner()) {
+      lock = true;
+      setTimeout(() => (lock = false), 2000);
+    }
   });
 });
