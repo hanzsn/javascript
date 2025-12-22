@@ -1,8 +1,8 @@
-Javascript Tasks and Projects
+Javascript tasks and projects
 
-Learning Resources:
-MDN Web Docs
-The Odin Project
+Learning resources:
+MDN web docs
+the odin project
 JavaScript.info
 
 Notes:
