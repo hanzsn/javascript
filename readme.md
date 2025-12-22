@@ -1,12 +1,7 @@
-Javascript tasks and projects
+javascript tasks and projects
 
-Learning resources:
-MDN web docs
-the odin project
-JavaScript.info
+notes:
+this repository is for learning purposes. code may not be production-ready and is subject to frequent updates as I learn new concepts.
 
-Notes:
-This repository is for learning purposes. Code may not be production-ready and is subject to frequent updates as I learn new concepts.
-
-License:
-This project is open source and available for educational purposes.
+license:
+this project is open source and available for educational purposes.
