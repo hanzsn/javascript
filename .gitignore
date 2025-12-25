@@ -1,9 +1,6 @@
+topics/
 node_modules/
 styles/
 .DS_Store           
 *.log
-test.html
-ArrayMethods/
-StringMethods/
-ObjectMethods/
 .vscode/
