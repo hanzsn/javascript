@@ -1,11 +1,11 @@
 {
   "name": "js",
   "version": "1.0.0",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --watch"
+    "tailwind": "npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --watch",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
@@ -13,9 +13,13 @@
   "description": "",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.17",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.1.17",
+    "terser": "^5.44.1"
   },
   "devDependencies": {
-    "daisyui": "^5.5.11"
+    "daisyui": "^5.5.11",
+    "glob": "^13.0.0",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1"
   }
 }
