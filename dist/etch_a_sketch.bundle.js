@@ -1,0 +1,13 @@
+(() => {
+  const e = document.querySelector(".container");
+  !(function () {
+    for (let t = 0; t < 256; t++) {
+      const t = document.createElement("div");
+      (t.className = "border"),
+        e.appendChild(t),
+        t.addEventListener("mouseenter", function (e) {
+          e.target.style.background = "#597445";
+        });
+    }
+  })();
+})();
