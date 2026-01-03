@@ -1,30 +1,43 @@
 import { Todo, TodoList } from "./todo.js";
 import renderTodos from "./ui.js";
 
-const inputText = document.getElementById("input-text");
-const addBtn = document.getElementById("add-btn");
+const DOM = (() => {
+  const getAddBtn = () => document.getElementById("add-btn");
+  const getInputText = () => document.getElementById("input-text");
+
+  return { getAddBtn, getInputText };
+})();
 
 const todoList = new TodoList();
 
 const addTask = () => {
-  const textInput = inputText.value.trim();
+  const textInput = DOM.getInputText().value.trim();
   if (!textInput) return;
 
   const todo = new Todo(textInput);
   todoList.add(todo);
-  console.table(todoList.getTodos());
 
-  inputText.value = "";
+  DOM.getInputText().value = "";
   renderTodos();
 };
 
-addBtn.addEventListener("click", addTask);
-inputText.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    addTask();
-  }
-});
+const displayDate = (todo) => {
+  return todo.date.toLocaleString("en-US", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+};
 
-todoList.add(new Todo("sleep"));
+if (typeof window !== "undefined") {
+  DOM.getAddBtn().addEventListener("click", addTask);
+  DOM.getInputText().addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      addTask();
+    }
+  });
+}
 
-export { addTask, todoList };
+export { addTask, todoList, displayDate };

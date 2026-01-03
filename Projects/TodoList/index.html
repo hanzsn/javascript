@@ -12,13 +12,13 @@
     >
       <h1 class="flex justify-center text-2xl font-medium">Todo's</h1>
       <div
-        class="flex flex-col justify-center gap-2 p-4 mb-6 border border-gray-300 rounded-lg"
+        class="flex flex-col justify-center gap-2 px-4 py-2 mb-6 border border-gray-300 rounded-lg"
       >
         <input
           type="text"
           name="text"
           id="input-text"
-          placeholder="Task name"
+          placeholder="Add a new task..."
           autocomplete="off"
           class="w-full p-2 text-sm border-0 rounded-lg focus:outline-none focus:ring-0 active:outline-none"
         />
@@ -71,7 +71,7 @@
             >
           </li>
           <li class="border border-gray-300 rounded-lg">
-            <a class="text-xs">
+            <a id="updates" class="text-xs">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="w-4 h-4"
@@ -141,10 +141,13 @@
       </div>
 
       <div
-        class="w-full h-full max-h-[50vh] list-container overflow-auto px-2"
+        class="w-full h-full max-h-[50vh] list-container overflow-auto"
       ></div>
     </section>
 
-    <script type="module" src="ui.js"></script>
+    <script type="module" src="./ui.js"></script>
+    <!--
+    <script src="/dist/todoList.bundle.js"></script>
+    -->
   </body>
 </html>
