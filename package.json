@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tailwind": "npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "keywords": [],
   "author": "",
@@ -17,8 +19,11 @@
     "terser": "^5.44.1"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "daisyui": "^5.5.11",
+    "eslint": "^9.39.2",
     "glob": "^13.0.0",
+    "globals": "^17.0.0",
     "webpack": "^5.104.1",
     "webpack-cli": "^6.0.1"
   }

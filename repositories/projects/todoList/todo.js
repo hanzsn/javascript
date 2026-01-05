@@ -72,7 +72,7 @@ class TodoList {
     return this.todos;
   }
 
-  showDate() {
+  showDate(id) {
     const todo = this.todos.find((todo) => todo.id === id);
     if (todo) {
       todo.showDate = !todo.showDate;

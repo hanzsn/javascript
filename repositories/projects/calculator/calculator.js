@@ -39,11 +39,11 @@ deleteButton.addEventListener("click", (event) => {
 });
 
 decimalButton.addEventListener("click", (event) => {
-  const parts = input.value.split(/[\+\-\*\/]/); // split(regex)
+  const parts = input.value.split(/[+\-*/]/); // split(regex)
   const current = parts.at(-1); // targets last element
 
   if (current.includes(decimal)) return;
-  if (/[\+\-\*\/]$/.test(input.value)) {
+  if (/[+\-*/]$/.test(input.value)) {
     input.value += "0.";
     return;
   }

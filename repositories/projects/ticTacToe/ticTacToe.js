@@ -26,6 +26,7 @@ const Player = (name, mark) => {
 };
 
 // GameController
+// eslint-disable-next-line no-unused-vars
 const GameController = (() => {
   const player1 = Player("player 1", "X");
   const player2 = Player("player 2", "O");

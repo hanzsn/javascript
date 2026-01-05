@@ -1,18 +1,17 @@
 const path = require("path");
-const { todoList } = require("./projects/todoList/todoList");
 
 module.exports = {
   entry: {
-    calculator: "./projects/calculator/calculator.js",
-    rps: "./projects/RPS/rps.js",
-    etch_a_sketch: "./projects/etch-a-sketch/EtchASketch.js",
-    library: "./projects/library/library.js",
-    restaurant: "./projects/restaurantPage/index.js",
-    todoList: "./projects/todoList/ui.js",
+    calculator: "./repositories/projects/calculator/calculator.js",
+    rps: "./repositories/projects/RPS/rps.js",
+    etch_a_sketch: "./repositories/projects/etch-a-sketch/EtchASketch.js",
+    library: "./repositories/projects/library/library.js",
+    restaurant: "./repositories/projects/restaurantPage/index.js",
+    todoList: "./repositories/projects/todoList/ui.js",
   },
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "./repositories/dist"),
     clean: true,
   },
   mode: "production",

@@ -5,7 +5,6 @@ const cRes = document.querySelector(".cRes");
 const pRes = document.querySelector(".pRes");
 const result = document.querySelector(".result");
 
-let total = 0;
 let playerScore = 0;
 let computerScore = 0;
 
