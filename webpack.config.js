@@ -1,4 +1,5 @@
 const path = require("path");
+const { todoList } = require("./projects/todoList/todoList");
 
 module.exports = {
   entry: {
@@ -7,6 +8,7 @@ module.exports = {
     etch_a_sketch: "./projects/etch-a-sketch/EtchASketch.js",
     library: "./projects/library/library.js",
     restaurant: "./projects/restaurantPage/index.js",
+    todoList: "./projects/todoList/ui.js",
   },
   output: {
     filename: "[name].bundle.js",
