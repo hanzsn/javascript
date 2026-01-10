@@ -5,7 +5,7 @@ module.exports = {
     calculator: "./repositories/projects/calculator/calculator.js",
     rps: "./repositories/projects/RPS/rps.js",
     etch_a_sketch: "./repositories/projects/etch-a-sketch/EtchASketch.js",
-    library: "./repositories/projects/library/library.js",
+    library: "./repositories/projects/library/libraryView.js",
     restaurant: "./repositories/projects/restaurantPage/index.js",
     todoList: "./repositories/projects/todoList/ui.js",
   },

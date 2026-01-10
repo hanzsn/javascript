@@ -1,6 +1,7 @@
 {
   "name": "js",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,6 +16,8 @@
   "description": "",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.17",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
     "tailwindcss": "^4.1.17",
     "terser": "^5.44.1"
   },
