@@ -1,4 +1,5 @@
 topics/
+dist/
 typescript/
 node_modules/
 styles/
